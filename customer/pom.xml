@@ -31,4 +31,64 @@
         </dependency>
 
     </dependencies>
+
+<!--    <build>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--            </plugin>-->
+
+<!--            <plugin>-->
+<!--                <groupId>com.spotify</groupId>-->
+<!--                <artifactId>docker-maven-plugin</artifactId>-->
+<!--                <version>1.0.0</version>-->
+
+<!--                <configuration>-->
+<!--                    &lt;!&ndash; 镜像名称  guoweixin/exam&ndash;&gt;-->
+<!--                    <imageName>${docker.image.perfix}/${project.artifactId}</imageName>-->
+<!--                    &lt;!&ndash;指定标签&ndash;&gt;-->
+<!--                    <imageTags>-->
+<!--                        <imageTag>latest</imageTag>-->
+<!--                    </imageTags>-->
+<!--                    &lt;!&ndash; 基础镜像jdk 1.8&ndash;&gt;-->
+<!--                    <baseImage>java</baseImage>-->
+<!--                    &lt;!&ndash; 制作者提供本人信息 &ndash;&gt;-->
+<!--                    <maintainer>huayun@huayunsoft.com</maintainer>-->
+<!--                    &lt;!&ndash;切换到/ROOT目录 &ndash;&gt;-->
+<!--                    <workdir>/ROOT</workdir>-->
+<!--                    <cmd>["java", "-version"]</cmd>-->
+<!--                    <entryPoint>["java", "-jar", "${project.build.finalName}.jar"]</entryPoint>-->
+
+<!--                    &lt;!&ndash; 指定 Dockerfile 路径&ndash;&gt;-->
+<!--&lt;!&ndash;                    <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>&ndash;&gt;-->
+
+<!--                    &lt;!&ndash;指定远程 docker api地址&ndash;&gt;-->
+<!--                    <dockerHost>http://192.168.1.107:2375</dockerHost>-->
+
+<!--                    &lt;!&ndash; 这里是复制 jar 包到 docker 容器指定目录配置 &ndash;&gt;-->
+<!--                    <resources>-->
+<!--                        <resource>-->
+<!--                            <targetPath>/ROOT</targetPath>-->
+<!--                            &lt;!&ndash;用于指定需要复制的根目录，${project.build.directory}表示target目录&ndash;&gt;-->
+<!--                            <directory>${project.build.directory}</directory>-->
+<!--                            &lt;!&ndash;用于指定需要复制的文件。${project.build.finalName}.jar指的是打包后的jar包文件。&ndash;&gt;-->
+<!--                            <include>${project.build.finalName}.jar</include>-->
+<!--                        </resource>-->
+<!--                    </resources>-->
+<!--                </configuration>-->
+
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>build-image</id>-->
+<!--                        <phase>package</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>build</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+
+<!--            </plugin>-->
+<!--        </plugins>-->
+<!--    </build>-->
 </project>

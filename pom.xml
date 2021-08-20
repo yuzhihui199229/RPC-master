@@ -26,6 +26,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
+    <properties>
+        <docker.image.perfix>rpc</docker.image.perfix>
+    </properties>
+
     <dependencies>
 
         <dependency>
@@ -90,6 +94,12 @@
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-databind</artifactId>
                 <version>2.9.6</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.protobuf</groupId>
+                <artifactId>protobuf-java</artifactId>
+                <version>3.11.4</version>
             </dependency>
 
         </dependencies>

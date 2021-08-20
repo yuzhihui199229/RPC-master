@@ -45,6 +45,5 @@ public class RpcServerDecoder extends ByteToMessageDecoder {
             protocol.setObject(object);
             out.add(protocol);
         }
-
     }
 }
